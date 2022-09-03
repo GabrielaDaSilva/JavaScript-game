@@ -70,7 +70,7 @@ function gamePlay() {
   } else if (playerScore < computerScore) {
     resultMessage = `The computer won this round. Try again! Player Score:${ playerScore } Computer Score:${ computerScore }`;
   } else {
-    resultMessage = "The game was a tie. Well played!"
+    resultMessage = `The game was a tie. Well played! Player Score:${ playerScore } Computer Score:${ computerScore }`
   }
   console.log(resultMessage);
 }
