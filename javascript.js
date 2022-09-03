@@ -8,8 +8,8 @@ function computerPlay() {
 }
 //One Round
 function playRound(playerSelection, computerSelection) {
- let determineWinner;
- let winnerMessage;
+  let determineWinner;
+  let winnerMessage;
   switch (playerSelection) {
     case "rock":
       if (computerSelection === "rock") {
@@ -54,9 +54,9 @@ function gamePlay() {
   let playerScore = 0;
   let computerScore = 0;
   let resultMessage;
-   for (let i = 0; i < 5; i++) {
-     let playerChoice = window.prompt("Enter your choice rock/paper/scissors");
-     let formattedPlayerChoice = playerChoice.toLowerCase();
+  for (let i = 0; i < 5; i++) {
+    let playerChoice = window.prompt("Enter your choice rock/paper/scissors");
+    let formattedPlayerChoice = playerChoice.toLowerCase();
     if (formattedPlayerChoice != "rock" && formattedPlayerChoice != "paper" && formattedPlayerChoice != "scissors") {
       alert("Invalid input"), i--
     } else {
@@ -70,11 +70,11 @@ function gamePlay() {
     }
   }
   if (playerScore > computerScore) {
-    resultMessage = `Congratulations, you win! Player Score: ${ playerScore } Computer Score:" ${ computerScore }`;
+    resultMessage = `Congratulations, you win! Player Score: ${playerScore} Computer Score:" ${computerScore}`;
   } else if (playerScore < computerScore) {
-    resultMessage = `The computer won this round. Try again! Player Score:${ playerScore } Computer Score:${ computerScore }`;
+    resultMessage = `The computer won this round. Try again! Player Score:${playerScore} Computer Score:${computerScore}`;
   } else {
-    resultMessage = `The game was a tie. Well played! Player Score:${ playerScore } Computer Score:${ computerScore }`
+    resultMessage = "The game was a tie. Well played!"
   }
   console.log(resultMessage);
 }
