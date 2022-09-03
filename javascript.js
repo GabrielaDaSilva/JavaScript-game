@@ -62,12 +62,12 @@ function gamePlay() {
     } else {
       let roundResult = playRound(formattedPlayerChoice, computerPlay());
       console.log(roundResult[1]);
-      if (roundResult[0] === "player") {
-        playerScore += 1;
-      } else if (roundResult[0] === "computer") {
-        computerScore += 1;
-      }
+    if (roundResult[0] === "player") {
+      playerScore += 1;
+    } else if (roundResult[0] === "computer") {
+      computerScore += 1;
     }
+   }
   }
   if (playerScore > computerScore) {
     resultMessage = `Congratulations, you win! Player Score: ${playerScore} Computer Score:" ${computerScore}`;
