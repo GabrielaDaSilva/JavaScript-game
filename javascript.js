@@ -55,27 +55,41 @@ function gamePlay() {
   let computerScore = 0;
   let resultMessage;
   for (let i = 0; i < 5; i++) {
-    let playerChoice = window.prompt("Enter your choice rock/paper/scissors");
-    let formattedPlayerChoice = playerChoice.toLowerCase();
-    if (formattedPlayerChoice != "rock" && formattedPlayerChoice != "paper" && formattedPlayerChoice != "scissors") {
-      alert("Invalid input"), i--
-    } else {
-      let roundResult = playRound(formattedPlayerChoice, computerPlay());
-      console.log(roundResult[1]);
-      if (roundResult[0] === "player") {
-        playerScore += 1;
-      } else if (roundResult[0] === "computer") {
-        computerScore += 1;
-      }
+    //linking to buttons in a node list and adding click event listeners
+    const rockButton = document.querySelector("#rock");
+    const paperButton = document.querySelector("#paper");
+    const scissorsButton = document.querySelector("#scissors");
+    
+    rockButton.addEventListener("click", () => {
+      alert(playerSelection = "you chose rock");
+      alert(computerSelection = `Computer chose ${computerPlay()}`);
+      alert(determineWinner);
+    });
+    paperButton.addEventListener("click", () => {
+      alert(playerSelection = "you chose rock");
+      alert(computerSelection = `Computer chose ${computerPlay()}`);
+      alert(determineWinner);
+    });
+    scissorsButton.addEventListener("click", () => {
+      alert(playerSelection = "you chose rock");
+      alert(computerSelection = `Computer chose ${computerPlay()}`);
+      alert(determineWinner);
+    });
+    let roundResult = playRound(formattedPlayerChoice, computerPlay());
+    console.log(roundResult[1]);
+    if (roundResult[0] === "player") {
+      playerScore += 1;
+    } else if (roundResult[0] === "computer") {
+      computerScore += 1;
     }
   }
-  if (playerScore > computerScore) {
-    resultMessage = `Congratulations, you win! Player Score: ${playerScore} Computer Score:" ${computerScore}`;
-  } else if (playerScore < computerScore) {
-    resultMessage = `The computer won this round. Try again! Player Score:${playerScore} Computer Score:${computerScore}`;
-  } else {
-    resultMessage = "The game was a tie. Well played!"
-  }
-  console.log(resultMessage);
 }
+if (playerScore > computerScore) {
+  resultMessage = `Congratulations, you win! Player Score: ${playerScore} Computer Score:" ${computerScore}`;
+} else if (playerScore < computerScore) {
+  resultMessage = `The computer won this round. Try again! Player Score:${playerScore} Computer Score:${computerScore}`;
+} else {
+  resultMessage = "The game was a tie. Well played!"
+}
+console.log(resultMessage);
 gamePlay();
