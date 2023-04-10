@@ -42,9 +42,9 @@ class Start {
   }
   matchResult() {
     if (this.winner != "SERI") {
-      return `${this.winner} MENANG!`;
+      return `${this.winner}`;
     } else {
-      return `WAAA ${this.winner}, ! 🤪`;
+      return `${this.winner}, ! 🤪`;
     }
   }
 }
