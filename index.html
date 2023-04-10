@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScriptGame</title>
-  <script src="./javascript.js" defer></script>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <header class="container1">
-    <h1>Choose your option below</h1>
-  </header>
-  <main class="container2">
-    <button id="rock">✊</button>
-    <button id="paper">✋</button>
-    <button id="scissors">✌️</button>
-  </main>
-  <section class="container3">
-    <h1>Scorebord:</h1>
-    <div>
-      <p><strong>Player</strong></p>
-      <div class="computerScore"></div>
-      <p><strong>Computer</strong></p>
-      <div class="playerScore"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MINIGAMES</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="summary">
+        <h1 id="title">MATCH RESUlTS</h1>
+        <br />
+        <h1 id="inGame"></h1>
+        <h3 id="result"></h3>
+      </div>
+      <div class="games">
+        <div class="option" onclick="pickOption('✊')">✊</div>
+        <div class="option" onclick="pickOption('✌')">✌</div>
+        <div class="option" onclick="pickOption('🖐')">🖐</div>
+      </div>
     </div>
-  </section>
-  <footer></footer>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
