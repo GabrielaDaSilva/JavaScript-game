@@ -1,52 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
-          content="width=device-width, 
-                   initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Rock Paper Scissor</title>
-    <script src="javascript.js"></script>
+	<title>Rock Paper Scissors Game</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
-    <section class="game">
-        <!--Title -->
-        <div class="title">Rock Paper Scissor</div>
-          
-          <!--Display Score of player and computer -->
-        <div class="score">  
-            <div class="playerScore">
-                <h2>Player</h2>
-                <p class="p-count count">0</p>
-  
-            </div>       
-            <div class="computerScore">
-                <h2>Computer</h2>
-                <p class="c-count count">0</p>
-  
-            </div>
-        </div>
-        
-        <div class="move">Choose your move</div>
-          
-          <!--Number of moves left before game ends -->
-        <div class="movesleft">Moves Left: 10 </div>
-          
-          <!--Options available to player to play game -->
-        <div class="options">
-            <button class="rock">Rock</button>
-            <button class="paper">Paper</button>
-            <button class="scissor">Scissors</button>    
-        </div>
-          
-          <!--Final result of game -->
-        <div class="result"></div>
-          
-          <!--Reload the game -->
-        <button class="reload"></button>
-  
-    </section>
-  
+	<header class="header">
+		<h1>Rock Paper Scissors Game</h1>
+	</header>
+	<div class="container">
+	    <div class="score-container">
+		    <span class="user">YOU</span>
+		    <span id="score"></span>
+		    <span class="com">COM</span>
+	    </div>
+	    <div class="buttons">
+		    <button id="paper" class="bn" onclick="game(this.value)" value="paper"><i class="far fa-hand-paper"></i></button>
+		    <button id="rock" class="bn" onclick="game(this.value)" value="rock"><i class="far fa-hand-rock"></i></button>
+		    <button id="scissors" class="bn" onclick="game(this.value)" value="scissors"><i class="far fa-hand-scissors"></i></button>
+	   </div>
+	   <div id="challenge">
+	   	<div id="you">
+	   	    <div id="YourObject"></div>
+	   	    <div class="who">You</div>
+	   	</div>
+	   	<div id="result"><p id="who"><p></div>
+	   	<div id="com">
+	   	    <div id="ComObject"></div>
+	   	    <div class="who">Computer</div>
+	   	</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
